@@ -1,0 +1,28 @@
+@use '../variables'
+@use '../mixins'
+
+.header
+    @include mixins.text($color: variables.$dark-blue, $size: 20px)
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 80px
+    padding: 20px
+    background-color: variables.$white
+    z-index: 999
+    text-align: center
+
+    .active
+        text-decoration: underline
+
+    ul
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        list-style: none
+
+        li
+            padding: 10px
+            &:hover
+                color: variables.$medium-blue

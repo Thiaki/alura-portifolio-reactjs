@@ -1,0 +1,42 @@
+@use '../variables'
+@use '../mixins'
+
+.introduction
+    display: flex
+    background-color: variables.$dark-blue
+    padding: 5% 4% 10%
+    gap: 100px
+
+    .container-text
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 75%
+
+        h1
+            @include mixins.text($size: 64px, $weight: 700)
+            margin-bottom: 25px
+            
+        p
+            @include mixins.text($size: 24px)
+
+    .container-image
+        position: relative
+        width: 25%
+
+        .circle
+            img
+                width: 350px
+                height: 350px
+                border-radius: 50%
+                filter: opacity(50%)
+
+        .profile
+            img
+                width: 260px
+                height: 260px
+                border-radius: 50%
+                position: absolute
+                top: 150px
+                right: -50px
+                margin-right: 5%

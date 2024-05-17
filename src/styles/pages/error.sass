@@ -1,0 +1,29 @@
+@use '../variables'
+@use '../mixins'
+
+.container
+    background-color: variables.$dark-blue
+    text-align: center
+    padding: 2% 0
+
+    h1
+        @include mixins.text($color: variables.$medium-blue, $size: 96px, $weight: 700)
+
+    h3
+        @include mixins.text($size: 48px, $weight: 700)
+    
+    p
+        @include mixins.text($size: 24px)
+
+    img
+        width: 100%
+        max-width: 378px
+        max-height: 419px
+    
+    button
+        @include mixins.text($size: 24px)
+        background-color: variables.$medium-blue
+        border: none
+        border-radius: 24px
+        padding: 24px 55px
+        margin-top: 50px

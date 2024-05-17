@@ -1,0 +1,16 @@
+@use '../variables'
+
+.footer
+    display: flex
+    justify-content: space-around
+    margin-top: auto
+    padding: 20px
+    background-color: variables.$dark-blue
+    color: variables.$white
+
+    span
+        text-decoration: underline
+        cursor: pointer
+        &:hover
+            color: variables.$medium-blue
+            transition: all .4s
