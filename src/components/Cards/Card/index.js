@@ -1,12 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Card = (props) => {
     return (
-        <div className='card'>
-            <img src={props.image} alt='' />
-            <h3>{props.children}</h3>
-            <button><a href='https://google.com'>Ler</a></button>
-        </div>
+        <Link to={`/posts/${props.id}`}>
+            <div className='card'>
+                <img src={props.image} alt='' />
+                <h3>{props.children}</h3>
+                <button>Ler</button>
+            </div>
+        </Link>
     )
 }
 
