@@ -8,6 +8,7 @@ const Header = () => {
             <ul>
                 <Item link={"/"}>Início</Item>
                 <Item link={"/sobremim"}>Sobre mim</Item>
+                <Item link={"/essapaginanaoexiste"}>404</Item>
             </ul>
         </header>
     )

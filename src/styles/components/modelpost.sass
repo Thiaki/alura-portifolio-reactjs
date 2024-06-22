@@ -4,7 +4,6 @@
 $space: 15px 50px
 
 article.container-modelPost
-    
     .cover-picture
         @include mixins.text($color: rgba(68, 68, 68, 1), $size: 64px, $weight: 700)
         width: 100%
@@ -12,23 +11,44 @@ article.container-modelPost
         display: flex
         align-items: center
         padding-left: 50px
-        opacity: 0.3
         background-size: cover
-        background-repeat: no-repeat 
-
-    h3
-        @include mixins.text($color: rgba(68, 68, 68, 1), $size: 40px, $weight: 700)
-        margin: $space
-    
-    p
-        @include mixins.text($color: rgba(68, 68, 68, 1), $size: 18px, $weight: 400)
-        margin: $space
-
-    .main-text
-        @include mixins.text($color: rgba(68, 68, 68, 1), $size: 24px, $weight: 700)
-        margin: $space
+        background-repeat: no-repeat
 
     .profile-picture
-        margin: $space
         float: right
         border-radius: 8px
+
+    .container-content
+        padding: $space
+
+        a
+            text-decoration: underline
+            color: blue
+
+        pre, blockquote 
+            overflow-x: auto
+            background-color: #ebebeb
+            margin: 15px 0
+
+        pre
+            padding: 0 0 0 15px
+
+        blockquote
+            padding: 15px 0 15px 15px
+
+        ul
+            li
+                margin: 15px 30px
+            
+        img
+            display: block
+            margin: 0 auto
+            border-radius: 8px
+            max-width: 300px
+            max-height: auto
+
+        h3
+            @include mixins.text($color: rgba(68, 68, 68, 1), $size: 40px, $weight: 700)
+
+        p
+            @include mixins.text($color: rgba(68, 68, 68, 1), $size: 18px, $weight: 400)
